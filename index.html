@@ -9,9 +9,9 @@
 
 <body>
 
-  <!-- NAVBAR (STEP 1 ADDED) -->
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <h2>ScriptForge</h2>
+    <h2>🔥 ScriptForge</h2>
     <div>
       <a href="index.html">Home</a>
       <a href="free.html">Free Scripts</a>
@@ -20,7 +20,7 @@
     </div>
   </nav>
 
-  <!-- TOP BAR -->
+  <!-- HEADER -->
   <header>
     <h1>🔥 ScriptForge</h1>
     <p>Trusted Roblox Maps, Scripts & Game Systems</p>
@@ -35,7 +35,7 @@
     </a>
   </section>
 
-  <!-- TRUST STRIP -->
+  <!-- TRUST -->
   <section class="trust">
     <p>✔ Instant download • ✔ Easy to use • ✔ Developer tested • ✔ Updated regularly</p>
   </section>
@@ -44,7 +44,7 @@
   <section id="products" class="products">
 
     <div class="card featured">
-      <img src="https://via.placeholder.com/400x200" alt="Money System">
+      <img src="https://via.placeholder.com/400x200">
       <h3>🧠 Money System (BEST SELLER)</h3>
       <p>Fully working Roblox money system with UI, saving, and upgrades.</p>
       <span class="badge">Most Popular</span>
@@ -55,7 +55,7 @@
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/400x200" alt="Simulator Map">
+      <img src="https://via.placeholder.com/400x200">
       <h3>🎮 Simulator Map Pack</h3>
       <p>Clean, optimized simulator map ready for any game type.</p>
       <p class="price">$5.99</p>
@@ -65,7 +65,7 @@
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/400x200" alt="Combat System">
+      <img src="https://via.placeholder.com/400x200">
       <h3>⚔️ Combat System Pro</h3>
       <p>Smooth fighting system with animations, hit detection & effects.</p>
       <p class="price">$6.99</p>
@@ -75,7 +75,7 @@
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/400x200" alt="Inventory System">
+      <img src="https://via.placeholder.com/400x200">
       <h3>💎 Inventory System</h3>
       <p>Clean drag & drop inventory system with UI and data saving.</p>
       <p class="price">$4.49</p>
@@ -86,7 +86,7 @@
 
   </section>
 
-  <!-- WHY US -->
+  <!-- WHY -->
   <section class="why">
     <h2>Why ScriptForge?</h2>
     <p>We build high-quality Roblox systems designed to save developers time and boost game quality instantly.</p>
@@ -96,6 +96,34 @@
   <footer>
     <p>© 2026 ScriptForge • Roblox Developer Marketplace</p>
   </footer>
+
+  <!-- SALES POPUP -->
+  <div id="sales-popup" class="sales-popup"></div>
+
+  <script>
+  const products = [
+    "Money System",
+    "Combat System Pro",
+    "Inventory System",
+    "Simulator Map Pack"
+  ];
+
+  function showPopup() {
+    const popup = document.getElementById("sales-popup");
+
+    const product = products[Math.floor(Math.random() * products.length)];
+    const time = Math.floor(Math.random() * 5) + 1;
+
+    popup.innerHTML = `🔥 Someone bought <strong>${product}</strong> ${time} min ago`;
+    popup.classList.add("show");
+
+    setTimeout(() => {
+      popup.classList.remove("show");
+    }, 4000);
+  }
+
+  setInterval(showPopup, Math.random() * 7000 + 8000);
+  </script>
 
 </body>
 </html>
