@@ -11,6 +11,32 @@ body {
   text-align: center;
 }
 
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 20px;
+  border-bottom: 1px solid #222;
+}
+
+.navbar h2 {
+  color: #00ff99;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #00ff99;
+}
+
 /* HEADER */
 header {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
@@ -149,5 +175,10 @@ footer {
 
   .hero h2 {
     font-size: 1.5rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
   }
 }
