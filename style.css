@@ -11,30 +11,59 @@ body {
   text-align: center;
 }
 
-/* NAVBAR */
+/* NAVBAR (UPGRADED MENU STYLE) */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
-  padding: 15px 20px;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
   border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+/* LOGO */
 .navbar h2 {
+  font-size: 1.6rem;
   color: #00ff99;
+  letter-spacing: 1px;
+}
+
+/* MENU LINKS */
+.navbar div {
+  display: flex;
+  gap: 25px;
 }
 
 .navbar a {
-  color: white;
-  margin-left: 15px;
+  color: #ccc;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00ff99;
+  left: 0;
+  bottom: -5px;
   transition: 0.3s;
 }
 
 .navbar a:hover {
-  color: #00ff99;
+  color: white;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 /* HEADER */
